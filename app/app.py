@@ -1,4 +1,3 @@
-# imports
 import os
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, jsonify
 from flask_sqlalchemy import SQLAlchemy
@@ -33,7 +32,6 @@ def index():
     entries = db.session.query(models.Flaskr)
     return render_template('index.html', entries=entries)
 
-
 @app.route('/add', methods=['POST'])
 def add_entry():
     """Adds new post to the database."""
@@ -44,7 +42,6 @@ def add_entry():
     db.session.commit()
     flash('New entry was successfully posted')
     return redirect(url_for('index'))
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -61,14 +58,12 @@ def login():
             return redirect(url_for('index'))
     return render_template('login.html', error=error)
 
-
 @app.route('/logout')
 def logout():
     """User logout/authentication/session management."""
     session.pop('logged_in', None)
     flash('You were logged out')
     return redirect(url_for('index'))
-
 
 @app.route('/delete/<int:post_id>', methods=['GET'])
 def delete_entry(post_id):

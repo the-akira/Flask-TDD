@@ -1,5 +1,5 @@
 $(function() {
-  console.log('ready!'); // sanity check
+  console.log('JS está funcionando!'); 
 });
 
 $('.entry').on('click', function() {
