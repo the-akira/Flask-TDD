@@ -15,6 +15,7 @@ $('.entry').on('click', function() {
       if(result.status === 1) {
         $(this).remove();
         console.log(result);
+        window.location.href = "/";
       }
     }
   });

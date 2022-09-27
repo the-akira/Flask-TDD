@@ -13,13 +13,13 @@
     {% else %}
       <a class="btn btn-warning" role="button" href="{{ url_for('logout') }}">log out</a>
     {% endif %}
-    <br><br>
+    <br>
     {% for message in get_flashed_messages() %}
       <div class="flash alert alert-success col-sm-4" role="success">{{ message }}</div>
     {% endfor %}
     <form action="{{ url_for('search') }}" method="get" class="from-group">
       <dl>
-        <dt>Search:</dt>
+        <dt><b>Search:</b></dt>
         <dd><input type="text" name="query" class="form-control col-sm-4" ></dd>
         <dd><input type="submit" class="btn btn-info" value="Search" ></dd>
       </dl>

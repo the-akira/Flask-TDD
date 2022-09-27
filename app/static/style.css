@@ -14,10 +14,15 @@ h1, h2 {
 
 h1 {
   border-bottom: 2px solid gray;
+  margin-bottom: 4px;
 }
 
 h2 {
   font-size: 1.2em;
+}
+
+.login-title {
+  margin-left: 15px;
 }
 
 .page {
@@ -38,13 +43,13 @@ h2 {
   margin: 0.8em 1.2em;
 }
 
-.entries li h2 {
-  margin-left: -1em;
-}
-
 .add-entry {
   font-size: 0.9em;
   border-bottom: 1px solid #ccc;
+}
+
+form {
+  margin-left: 15px;
 }
 
 .add-entry dl {
@@ -77,4 +82,12 @@ h2 {
 
 textarea{
   resize: none;
+}
+
+dd {
+  margin: 0px;
+}
+
+.btn {
+  margin-top: 5px !important;
 }

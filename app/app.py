@@ -38,9 +38,12 @@ def add_entry():
     if not session.get('logged_in'):
         abort(401)
     new_entry = models.Flaskr(request.form['title'], request.form['text'])
-    db.session.add(new_entry)
-    db.session.commit()
-    flash('New entry was successfully posted')
+    if new_entry.title and new_entry.text:
+        db.session.add(new_entry)
+        db.session.commit()
+        flash('New entry was successfully posted')
+    else:
+        flash('You must inform the title and text')
     return redirect(url_for('index'))
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -88,4 +91,4 @@ def search():
     return render_template('search.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=8000)
