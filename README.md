@@ -1,6 +1,6 @@
 # Flask Test-Driven Development
 
-My version of the tutorial [Flask TDD](https://github.com/mjhea0/flaskr-tdd).
+Inspired by the tutorial [Flask TDD](https://github.com/mjhea0/flaskr-tdd).
 
 ## Installation
 
